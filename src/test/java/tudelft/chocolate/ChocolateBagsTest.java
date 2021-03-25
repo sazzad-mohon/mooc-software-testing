@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 public class ChocolateBagsTest {
     @ParameterizedTest(name = "small={0}, big={1}, total={2}, result={3}")
-    @CsvSource({ "1,1,5,0", "1,1,6,1", "1,1,7,-1", "1,1,8,-1" })
+    @CsvSource({ "1,1,5,0", "1,1,6,1", "1,1,7,-1", "1,1,8,-1","3,4,65,-1" })
     public void totalIsTooBig(int small, int big, int total, int expectedResult) {
         ChocolateBags bags = new ChocolateBags();
         int result = bags.calculate(small, big, total);
